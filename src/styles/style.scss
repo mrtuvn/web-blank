@@ -1,0 +1,9 @@
+//@layer reset, framework, base, layout, components, utilities;
+/* in this sort import in reset will have higher priority than framework  */
+/* important prority reset > framework > base > layout > components > utilities */
+
+@use "base";
+@use "components";
+@use "layout";
+@use "utilities";
+@use "vendor";
