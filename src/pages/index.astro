@@ -1,16 +1,27 @@
 ---
 import "../styles/style.scss";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "../components/Common/Header.astro";
+import Footer from "../components/Common/Footer.astro";
 ---
 
-<Layout
-  title="British University Vietnam (BUV) - The first QS 5-star university in Vietnam"
->
-  <Header />
-  <main>
-    <h1>Welcome to Astro</h1>
+<Layout title="Consumer & Home Electronics from LG | LG UK">
+  <Header widthLogo="100" altLogo="LG logo (Life's Good)" />
+  <main class="main-section">
+    <section>
+      <div class="container">
+        <h1 class="text-center capitalize fs-300 fs-small">Welcome to Astro</h1>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .main-section {
+    min-height: 100svh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+</style>

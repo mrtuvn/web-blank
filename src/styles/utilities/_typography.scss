@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.fw-regular {
+  font-weight: $font-weight-default;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold;
+}

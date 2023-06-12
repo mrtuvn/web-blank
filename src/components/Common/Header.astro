@@ -1,0 +1,73 @@
+---
+export interface Props {
+  widthLogo: string;
+  altLogo: string;
+}
+
+import ListItem from "./Nav/ListItem.astro";
+const { widthLogo, altLogo } = Astro.props;
+const categories = await Astro.glob("/src/data/categories.json");
+---
+
+<header class="header-primary">
+  <div class="header-inner">
+    <div class="main-logo">
+      <img
+        loading="lazy"
+        src="/src/images/logo-lg-100-44.svg"
+        width={widthLogo}
+        alt={altLogo}
+      />
+    </div>
+    <div class="header-details">
+      <nav class="main-nav">
+        <ul>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">Shop</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">TV/Audio/Video</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">Appliances</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">Heating & Cooling</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">Computing</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link level0" href="#">Support</a>
+            <div class="subContent">
+              <p>abc</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-links">
+        <button class="button" data-role="aslink">Business</button>
+        <ul class="links-actions">
+          <li role="search"></li>
+          <li role="login"></li>
+          <li role="cart"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
