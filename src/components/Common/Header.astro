@@ -5,8 +5,8 @@ export interface Props {
 }
 
 import ListItem from "./Nav/ListItem.astro";
+import categories from "/src/content/categories.json";
 const { widthLogo, altLogo } = Astro.props;
-const categories = await Astro.glob("/src/data/categories.json");
 ---
 
 <header class="header-primary">
@@ -22,50 +22,29 @@ const categories = await Astro.glob("/src/data/categories.json");
     <div class="header-details">
       <nav class="main-nav">
         <ul>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">Shop</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">TV/Audio/Video</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">Appliances</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">Heating & Cooling</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">Computing</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
-          <li class="list-item">
-            <a class="list-item-link level0" href="#">Support</a>
-            <div class="subContent">
-              <p>abc</p>
-            </div>
-          </li>
+          {
+            categories.map((category) => (
+              <ListItem
+                title={category.title}
+                link={category.link}
+                subChildContent={category.subChildContent}
+              />
+            ))
+          }
         </ul>
       </nav>
       <div class="header-links">
-        <button class="button" data-role="aslink">Business</button>
+        <button class="button" data-role="aslink" data-type="default"
+          ><span>Business</span>
+        </button>
         <ul class="links-actions">
-          <li role="search"></li>
-          <li role="login"></li>
-          <li role="cart"></li>
+          <li class="icon-pseudo search"></li>
+          <li class="icon-pseudo login">
+            <ul class="submenu-actions"><li>Sign In / Login In</li></ul>
+          </li>
+          <li class="icon-pseudo cart">
+            <span class="item-count hide hidden" style="display:none;">1</span>
+          </li>
         </ul>
       </div>
     </div>

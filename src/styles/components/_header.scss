@@ -24,6 +24,7 @@
     display: none;
     padding: 1rem;
   }
+
   a {
     font-size: 17px;
     cursor: pointer;
@@ -47,4 +48,119 @@
 .header-details {
   display: flex;
   gap: 20px;
+}
+
+.header-links {
+  display: flex;
+  gap: 2.25rem; /* for desktop */
+  min-width: 200px;
+  align-items: center;
+  justify-content: flex-end;
+
+  > * {
+    display: inline-flex;
+    gap: 5px;
+  }
+
+  .submenu-actions {
+    display: none;
+    border-radius: 10px;
+    background: #fff;
+    padding: 12px;
+    position: absolute;
+    top: 40px;
+    min-width: 200px;
+    color: #000;
+  }
+
+  .links-actions .login:hover .submenu-actions {
+    display: block;
+  }
+
+  .links-actions {
+    > li {
+      max-width: 40px;
+      max-height: 40px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 0.75rem;
+  }
+
+  .icon-pseudo {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex: 1 0 24px;
+    cursor: pointer;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .icon-pseudo.search {
+    background-image: url("/src/images/icon-search-black-24-24.svg");
+
+    &:hover {
+      background-image: url("/src/images/icon-search-red-24-24.svg");
+    }
+  }
+
+  .icon-pseudo.cart {
+    background-image: url("/src/images/icon-cart-black-24-24.svg");
+
+    &:hover {
+      background-image: url("/src/images/icon-cart-red-24-24.svg");
+    }
+  }
+
+  .icon-pseudo.login {
+    background-image: url("/src/images/icon-my-black-24-24.svg");
+
+    &:hover {
+      background-image: url("/src/images/icon-my-red-24-24.svg");
+    }
+  }
+
+  button {
+    border-radius: 9999px;
+    color: #000;
+    background-color: #fff;
+    line-height: 1;
+    align-items: center;
+    font-size: 0.875rem;
+    height: 2.25rem;
+    min-width: 5rem;
+    font-weight: 600;
+    border: 0.0625rem solid #646464;
+
+    &:hover {
+      background: #ea1917;
+      border-color: #ea1917;
+    }
+  }
+}
+
+header a {
+  color: var(--var-color-black, #000);
+}
+
+.list-item-link.level0 {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.list-item-link.level0:hover {
+  text-decoration: underline;
+}
+
+header .list-item-link.level0:hover .subContent {
+  display: inline-block;
 }

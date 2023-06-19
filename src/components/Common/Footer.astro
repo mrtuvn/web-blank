@@ -1,14 +1,46 @@
 <footer>
-  <p>Footer</p>
+  <p>Footer Title</p>
 
-  <ul>
-    <li>this is option 1</li>
-    <li>this is option 2</li>
-  </ul>
+  <div class="footer-links">
+    <ul>
+      <li>this is option 1</li>
+      <li>this is option 2</li>
+      <li>this is option 3</li>
+    </ul>
+
+    <ul>
+      <li>this is option 1</li>
+      <li>this is option 2</li>
+      <li>this is option 3</li>
+    </ul>
+
+    <ul>
+      <li>this is option 1</li>
+      <li>this is option 2</li>
+      <li>this is option 3</li>
+    </ul>
+
+    <ul>
+      <li>this is option 1</li>
+      <li>this is option 2</li>
+      <li>this is option 3</li>
+    </ul>
+  </div>
 </footer>
 
 <style>
   p {
     width: 100%;
+  }
+
+  footer {
+    display: grid;
+    gap: 10px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
   }
 </style>

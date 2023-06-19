@@ -1,14 +1,14 @@
 ---
 export interface Props {
-  itemTitle: string;
-  itemLink: string;
+  title: string;
+  link: string;
   subChildContent?: string;
 }
 
-const { itemTitle, itemLink, subChildContent } = Astro.props;
+const { title, link, subChildContent } = Astro.props;
 ---
 
 <li class="list-item">
-  <a class="list-item-link" href={itemLink}>{itemTitle}</a>
-  <div class="subContent" set:html={subChildContent} />
+  <a class="list-item-link level0" href={link}>{title}</a>
+  <div class="list-item-content subContent" set:html={subChildContent} />
 </li>

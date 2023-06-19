@@ -25,6 +25,13 @@
     }
   }
 
+  &[data-type="default"] {
+    &:is(:hover) {
+      background: #ea1917;
+      border-color: #ea1917;
+    }
+  }
+
   &[data-type="primary"] {
     background-color: $button-primary-background;
     color: $button-primary-color;

@@ -2,31 +2,31 @@
   {
     "title": "Shop",
     "link": "#",
-    "subContent": "\n <p>abc</p>"
+    "subChildContent": "\n <p>abc</p>"
   },
   {
     "title": "TV/Audio/Video",
     "link": "#",
-    "subContent": "\n<p>bcd</p> "
+    "subChildContent": "\n<p>bcd</p> "
   },
   {
     "title": "Appliances",
     "link": "#",
-    "subContent": "\n<p>abcdef</p>"
+    "subChildContent": "\n<p>abcdef</p>"
   },
   {
     "title": "Heating & Cooling",
     "link": "#",
-    "subContent": "\n<p>ab21312312c</p>"
+    "subChildContent": "\n<p>ab21312312c</p>"
   },
   {
     "title": "Computing",
     "link": "#",
-    "subContent": "\n<p>abc33333</p> "
+    "subChildContent": "\n<p>abc33333</p> "
   },
   {
     "title": "Support",
     "link": "#",
-    "subContent": ""
+    "subChildContent": ""
   }
 ]

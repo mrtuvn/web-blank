@@ -10,6 +10,7 @@ $-clr-brown-700: hsl(20 23% 23%);
 $-clr-brown-800: hsl(18 23% 10%);
 $-clr-bg-primary: hsl(40, 29%, 92%);
 $-clr-bg-secondary: hsl(40, 19%, 92%);
+$-button-background-default: #ea1917;
 
 $colors: (
   "neutral": (
@@ -44,3 +45,4 @@ $color-primary-400: var(--primary-400);
 $color-primary-700: var(--primary-700);
 $color-primary-800: var(--primary-800);
 $color-bg-primary: var(--bg-primary);
+$color-bg-button-default: var($-button-background-default);
